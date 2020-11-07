@@ -109,6 +109,7 @@ section{
     padding: var(--spacer-lg);
     justify-content: flex-start;
     height: 100%;
+    color: var(--colors-black);
 }
 
 /*DEFAULTS FOR FORM ELEMENTS*/
