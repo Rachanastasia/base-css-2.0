@@ -20,4 +20,4 @@ This file is meant as a starting point for CSS.
 
 ## How to use
 
-Copy the first section into it's own file, globals.css. Import both this file and globals.css into project. Remove unused CSS.
+Add rachel.css and globals.css (and re-name rachel.css please) to project. Import to App.js or equivalent. Adjust styles as needed.
