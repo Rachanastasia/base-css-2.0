@@ -1,3 +1,4 @@
+
 /*RACHELS BASE CSS STYLES*/
 
 *{
@@ -6,13 +7,19 @@
     box-sizing: border-box;
 }
 
+img{
+    width: 90%;
+}
+
 main{
     width: 100%;
     min-height: 100vh;
-    padding: var(--spacer-sm);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
+
+    font-family: var(--font);
 }
 
 header{
@@ -73,7 +80,7 @@ section{
     width: inherit;
     padding: var(--spacer-lg);
     justify-content: flex-start;
-    height: 100%;
+    height: inherit;
     color: var(--colors-black);
 }
 
