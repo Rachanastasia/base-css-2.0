@@ -1,0 +1,36 @@
+/*BASIC VARIABLE SETUP WITH MEDIA QUERIES*/
+
+:root{
+    --colors-accent: #01579B;
+    --colors-muted: #616161;
+    --colors-black: #020202;
+    --colors-white: #f5f5f5;
+
+    --spacer-sm: 0.8rem;
+    --spacer-med: 1rem;
+    --spacer-lg: 1.2rem;
+
+    --font-size-sm: 14px;
+}
+
+@media all and (min-width: 500px){
+   :root{
+    --spacer-sm: 0.9rem;
+    --spacer-med: 1.1rem;
+    --spacer-lg: 1.3rem;
+
+    --font-size-sm: 16px;
+   } 
+
+}
+
+@media all and (min-width: 800px){
+    :root{
+     --spacer-sm: 1rem;
+     --spacer-med: 1.3rem;
+     --spacer-lg: 1.5rem;
+ 
+     --font-size-sm: 18px;
+    } 
+ 
+ }
