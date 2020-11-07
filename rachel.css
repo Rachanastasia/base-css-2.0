@@ -80,7 +80,7 @@ section{
 
 
 
-/*DEFAULTS FOR FORM ELEMENTS*/
+/*STYLES FOR FORM ELEMENTS*/
 form{
     display: flex;
     flex-direction: column;
