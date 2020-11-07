@@ -1,0 +1,151 @@
+/*MOVE GLOBAL VARIABLES TO OTHER FILE*/
+:root{
+    --colors-accent: #01579B;
+    --colors-muted: #616161;
+    --colors-black: #020202;
+    --colors-white: #f5f5f5;
+
+    --spacer-sm: 0.8rem;
+    --spacer-med: 1rem;
+    --spacer-lg: 1.2rem;
+
+    --font-size-sm: 14px;
+}
+
+@media all and (min-width: 500px){
+   :root{
+    --spacer-sm: 0.9rem;
+    --spacer-med: 1.1rem;
+    --spacer-lg: 1.3rem;
+
+    --font-size-sm: 16px;
+   } 
+
+}
+
+@media all and (min-width: 800px){
+    :root{
+     --spacer-sm: 1rem;
+     --spacer-med: 1.3rem;
+     --spacer-lg: 1.5rem;
+ 
+     --font-size-sm: 18px;
+    } 
+ 
+ }
+/*MOVE STYLES ABOVE THIS TO OTHER FILE*/
+
+
+/*RACHELS BASE STYLES*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    padding: var(--spacer-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+header{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colors-accent);
+    color: var(--colors-white);
+    padding: var(--spacer-sm);
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: inherit;
+    height: 50px;
+    background-color: var(--colors-accent);
+    color: var(--colors-white);
+    padding: var(--spacer-sm);
+}
+
+footer .icon{
+    color: var(--colors-white);
+    font-size: 30px;
+}
+
+p{
+    padding: var(--spacer-sm) 0;
+    font-size: var(--font-size-sm);
+}
+
+button{
+    cursor: pointer;
+    outline: 0;
+    width: 90px;
+    height: 40px;
+    background-color: var(--colors-accent);
+    color: var(--colors-white);
+    border: 2px solid var(--colors-accent);
+    margin: var(--spacer-sm) 0;
+    padding: 0;
+}
+
+button:focus{
+    background-color: var(--colors-light);
+    color: var(--colors-accent);
+    border: 2px solid var(--colors-accent);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    padding: var(--spacer-lg);
+    justify-content: flex-start;
+    height: 100%;
+}
+
+/*DEFAULTS FOR FORM ELEMENTS*/
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 3px;
+    font-size: var(--font-size-sm);
+    outline: 0;
+}
+
+input:focus, textarea:focus{
+    border: 2px solid var(--colors-accent);
+}
+/*END FORM STYLES*/
+
+
+@media all and (min-width: 500px){
+ header{
+     flex-direction: row;
+     justify-content: space-between;
+ }
+ }
+ 
+ @media all and (min-width: 800px){
+  
+  }
