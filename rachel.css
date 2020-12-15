@@ -8,17 +8,16 @@
 }
 
 img{
-    width: 90%;
+    width: 100%;
 }
 
 main{
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh- 100px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
     font-family: var(--font);
 }
 
@@ -51,27 +50,26 @@ footer .icon{
 
 p{
     padding: var(--spacer-sm) 0;
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-regular);
 }
 
-button{
+button, .button{
     cursor: pointer;
     outline: 0;
-    width: 90px;
-    height: 40px;
+    width: var(--button-width);
+    height: var(--button-height);
     background-color: var(--colors-accent);
     color: var(--colors-white);
-    border: 2px solid var(--colors-accent);
+    border: var(--border-width) solid var(--colors-accent);
     margin: var(--spacer-sm) 0;
     padding: 0;
-
     border-radius: 15px;
 }
 
-button:focus{
-    background-color: var(--colors-light);
+button:focus, .button:focus{
+    background-color: var(--colors-white);
     color: var(--colors-accent);
-    border: 2px solid var(--colors-accent);
+    border: var(--border-width) solid var(--colors-accent);
 }
 
 section{
@@ -80,7 +78,7 @@ section{
     width: inherit;
     padding: var(--spacer-lg);
     justify-content: flex-start;
-    height: inherit;
+    height: 100%;
     color: var(--colors-black);
 }
 
@@ -109,7 +107,7 @@ input, textarea{
 }
 
 input:focus, textarea:focus{
-    border: 2px solid var(--colors-accent);
+    border: var(--border-width) solid var(--colors-accent);
 }
 /*END FORM STYLES*/
 

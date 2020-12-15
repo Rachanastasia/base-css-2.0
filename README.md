@@ -8,15 +8,15 @@ This file is meant as a starting point for CSS.
 
 - sets up main, section, header, and footer as flexboxes
 
-- sets up page white page with accent-color header, footer, buttons, and black text
+- sets up page with white background, accent-color header, footer, buttons, and black text
 
 - adds padding to containers and paragraphs
 
-- reformats buttons
+- reformats buttons with variables for height, width, and focus
 
-- sets up basic media queries
+- sets up basic media queries and increases font and spacer size accordingly
 
-- formats form elements, including making divs inside forms into rows
+- formats form elements, including making divs inside form elements into rows
 
 ## How to use
 
