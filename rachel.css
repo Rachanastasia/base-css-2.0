@@ -19,8 +19,68 @@ main{
     justify-content: flex-start;
     align-items: center;
     font-family: var(--font);
+    line-height: var(--line-spacing);
 }
 
+h2, h3{
+    font-size: var(--font-size-med);
+}
+
+p{
+    padding: var(--spacer-sm) 0;
+    font-size: var(--font-size-sm);
+}
+
+p:last-of-type{
+    padding-bottom: 0;
+}
+
+button, .button{
+    cursor: pointer;
+    outline: 0;
+    font-size: var(--font-size-sm);
+    width: var(--button-width);
+    height: 100%;
+    background-color: inherit;
+    color: var(--colors-accent);
+    border: 1px solid var(--colors-accent);
+    padding: var(--spacer-tiny);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:focus, .button:focus,
+button:hover, .button:hover{
+    background-color: var(--colors-accent);
+    color: var(--colors-white);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    padding: var(--spacer-sm) var(--spacer-lg);
+    justify-content: flex-start;
+    height: 100%;
+    color: var(--colors-black);
+}
+
+section:first-of-type{
+    padding-top: var(--spacer-lg);
+}
+
+section:last-of-type{
+    padding-bottom: var(--spacer-lg);
+}
+
+
+
+
+
+
+/*HEADER STYLES */
 header{
     width: inherit;
     display: flex;
@@ -32,12 +92,76 @@ header{
     padding: var(--spacer-sm);
 }
 
+h1{
+    font-size: var(--font-size-lg);
+    padding: 0 var(--spacer-sm) var(--spacer-lg);
+}
+
+header button,
+header .button{
+    color: var(--colors-white);
+    border: 1px solid var(--colors-white);
+}
+
+header button:focus, header .button:focus,
+header button:hover, header .button:hover{
+    background-color: var(--colors-accent-light);
+}
+/* END HEADER STYLES */
+
+
+
+/*STYLES FOR FORM ELEMENTS*/
+form{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset{
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacer-sm) 0;
+    outline: 0;
+    border: 0;
+}
+
+label{
+    padding-right: var(--spacer-sm);
+}
+
+input{
+    font-size: var(--font-size-sm);
+    border: 1px solid grey;
+    
+}
+
+input, textarea{
+    flex: 3;
+    width: 100%;
+    padding: var(--spacer-tiny) ;
+    font-size: var(--font-size-sm);
+    outline: 0;
+}
+
+input:focus, textarea:focus{
+    outline: 2px solid var(--colors-accent);
+}
+/*END FORM STYLES*/
+
+
+
+/*FOOTER STYLES */
 footer{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: inherit;
-    height: 50px;
+    height: 100%;
     background-color: var(--colors-accent);
     color: var(--colors-white);
     padding: var(--spacer-sm);
@@ -45,82 +169,61 @@ footer{
 
 footer .icon{
     color: var(--colors-white);
-    font-size: 30px;
+    font-size: var(--font-size-med);
+    height: var(--font-size-med);
+    
 }
 
-p{
-    padding: var(--spacer-sm) 0;
-    font-size: var(--font-size-regular);
-}
-
-button, .button{
-    cursor: pointer;
-    outline: 0;
-    width: var(--button-width);
-    height: var(--button-height);
-    background-color: var(--colors-accent);
-    color: var(--colors-white);
-    border: var(--border-width) solid var(--colors-accent);
-    margin: var(--spacer-sm) 0;
-    padding: 0;
-    border-radius: 15px;
-}
-
-button:focus, .button:focus{
-    background-color: var(--colors-white);
-    color: var(--colors-accent);
-    border: var(--border-width) solid var(--colors-accent);
-}
-
-section{
+footer a{
+    height: inherit;
     display: flex;
-    flex-direction: column;
-    width: inherit;
-    padding: var(--spacer-lg);
-    justify-content: flex-start;
-    height: 100%;
-    color: var(--colors-black);
-}
-
-
-
-
-/*STYLES FOR FORM ELEMENTS*/
-form{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-form div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-input, textarea{
-    width: 100%;
-    padding: 3px;
-    font-size: var(--font-size-sm);
     outline: 0;
 }
 
-input:focus, textarea:focus{
-    border: var(--border-width) solid var(--colors-accent);
+footer a:hover .icon,
+footer a:focus .icon{
+    color: var(--colors-accent-light);
 }
-/*END FORM STYLES*/
+
+footer p{
+    padding: 0;
+    font-size: var(--font-size-sm);
+}
+/*END FOOTER STYLES */
+
+
+
 
 
 
 
 @media all and (min-width: 500px){
- header{
-     flex-direction: row;
-     justify-content: space-between;
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    h1{
+        padding-left: 0;
+        padding-bottom: var(--spacer-sm);
+        padding-top: var(--spacer-sm);
+    }
  }
+
+ @media all and (min-width: 600px){
+     header{
+         padding: var(--spacer-sm) var(--spacer-lg);
+     }
+
+     p{
+         padding-bottom: 0;
+     }
  }
  
- @media all and (min-width: 800px){
+ @media all and (min-width: 1000px){
   
+    section{
+        max-width: var(--max-page-width);
+    }
   }
