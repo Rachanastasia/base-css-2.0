@@ -7,13 +7,10 @@
     box-sizing: border-box;
 }
 
-img{
-    width: 100%;
-}
-
 main{
     width: 100%;
-    min-height: calc(100vh- 100px);
+    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -35,17 +32,22 @@ p:last-of-type{
     padding-bottom: 0;
 }
 
+a{
+    text-decoration: none;
+    color: var(--colors-accent);
+}
+
 button, .button{
     cursor: pointer;
     outline: 0;
     font-size: var(--font-size-sm);
     width: var(--button-width);
-    height: 100%;
+    height: var(--button-height);
     background-color: inherit;
     color: var(--colors-accent);
-    border: 1px solid var(--colors-accent);
+    border: var(--border-width) solid var(--colors-accent);
     padding: var(--spacer-tiny);
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,6 +69,7 @@ section{
     color: var(--colors-black);
 }
 
+/*section padding increased on first and last items*/
 section:first-of-type{
     padding-top: var(--spacer-lg);
 }
@@ -76,9 +79,9 @@ section:last-of-type{
 }
 
 
-
-
-
+img{
+    width: 100%;
+}
 
 /*HEADER STYLES */
 header{
@@ -90,6 +93,7 @@ header{
     background-color: var(--colors-accent);
     color: var(--colors-white);
     padding: var(--spacer-sm);
+    height: var(--button-height);
 }
 
 h1{
@@ -100,26 +104,31 @@ h1{
 header button,
 header .button{
     color: var(--colors-white);
-    border: 1px solid var(--colors-white);
+    border: var(--border-width) solid var(--colors-white);
+    background-color: inherit;
 }
 
 header button:focus, header .button:focus,
 header button:hover, header .button:hover{
-    background-color: var(--colors-accent-light);
+    background-color: var(--colors-white);
+    color: var(--colors-accent);
+    border: var(--border-width) solid var(--colors-accent);
 }
 /* END HEADER STYLES */
 
 
 
 /*STYLES FOR FORM ELEMENTS*/
+/*sets up form as flexbox with max width of 4x button width*/
 form{
     width: inherit;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: calc(4 * var(--button-width));
 }
-
+/*sets label and input next to each other*/
 fieldset{
     width: inherit;
     display: flex;
@@ -129,15 +138,15 @@ fieldset{
     outline: 0;
     border: 0;
 }
-
+/*limits width of label*/
 label{
     padding-right: var(--spacer-sm);
+    width: var(--button-width);
 }
 
 input{
     font-size: var(--font-size-sm);
-    border: 1px solid grey;
-    
+    border: var(--border-width) solid grey;
 }
 
 input, textarea{
@@ -149,13 +158,15 @@ input, textarea{
 }
 
 input:focus, textarea:focus{
-    outline: 2px solid var(--colors-accent);
+    outline: var(--border-width) solid var(--colors-accent);
 }
 /*END FORM STYLES*/
 
 
 
-/*FOOTER STYLES */
+/*
+FOOTER STYLES 
+Meant to be used with custom footer component*/
 footer{
     display: flex;
     justify-content: space-evenly;
@@ -184,7 +195,7 @@ footer a{
 
 footer a:hover .icon,
 footer a:focus .icon{
-    color: var(--colors-accent-light);
+    color: var(--colors-accent);
 }
 
 footer p{
@@ -195,11 +206,8 @@ footer p{
 
 
 
-
-
-
-
 @media all and (min-width: 500px){
+    /*Flips header to row at screens over 500px and removes col-specific padding*/
     header{
         flex-direction: row;
         justify-content: space-between;
@@ -212,17 +220,16 @@ footer p{
  }
 
  @media all and (min-width: 600px){
+     /*Increases space on left and right of header*/
      header{
          padding: var(--spacer-sm) var(--spacer-lg);
      }
-
      p{
          padding-bottom: 0;
      }
  }
  
  @media all and (min-width: 1000px){
-  
     section{
         max-width: var(--max-page-width);
     }

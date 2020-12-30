@@ -12,6 +12,8 @@
     --spacer-lg: 1.8rem;
 
     --button-width: 6.8rem;
+    --button-height: 2rem;
+    --button-border-radius: 4px;
 
     --font-size-sm: 1.2rem;
     --font-size-med: 1.6rem;
@@ -20,21 +22,18 @@
     --max-page-width: 80vw;
 
     --line-spacing: calc(var(--font-size-sm) * 1.4);
+
+    --border-width: 1px;
     
     --font: "Verdana", sans-serif;
 }
 
-@media all and (min-width: 600px){
-
-}
 
 @media all and (min-width: 800px){
     :root{
-
      --spacer-med: 1.8rem;
      --spacer-lg: 2.4rem;
  
-     
     } 
  
  }
