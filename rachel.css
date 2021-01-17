@@ -93,12 +93,11 @@ header{
     background-color: var(--colors-accent);
     color: var(--colors-white);
     padding: var(--spacer-sm);
-    height: var(--button-height);
+    height: var(--button-width);
 }
 
 h1{
     font-size: var(--font-size-lg);
-    padding: 0 var(--spacer-sm) var(--spacer-lg);
 }
 
 header button,
