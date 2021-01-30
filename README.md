@@ -39,6 +39,20 @@ This file contains all CSS variables for the project.
 - Height
 - Border radius
 
-## <main>
+## rachel.css
 
-Th
+### Header
+
+Sets up as as flex box with title and button stacked in mobile and justified space between on larger screens
+
+### Section
+
+Sets up as flex column that is meant to be the immediate child sub-section of main. It limits width and has small padding.
+
+### Form
+
+Sets up label and input next to each other and aligns form elements.
+
+### Footer
+
+Sets up a footer with icons that function as links that are spaced evenly.
