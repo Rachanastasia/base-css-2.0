@@ -1,23 +1,44 @@
-# Rachel's CSS Base Syles
+# Base CSS for Mobile First Development
 
-This file is meant as a starting point for CSS.
+This file is meant as a starting point for CSS. It sets up varaibles and styles DOM elements for mobile first development.
 
-## What does it do?
+## globals.css
 
-- makes color, spacer, and font-size variables
+This file contains all CSS variables for the project.
 
-- sets up main, section, header, and footer as flexboxes
+### Color
 
-- sets up page with white background, accent-color header, footer, buttons, and black text
+- Accent (--colors-accent)
+- Light variant (--colors-accent-light)
+- Dark variant (--colors-accent-dark)
+- Black (--colors-black)
+- White (--colors-white)
 
-- adds padding to containers and paragraphs
+### Spacer
 
-- reformats buttons with variables for height, width, and focus
+- Tiny (--spacer-tiny)
+- Small (--spacer-sm)
+- Medium (--spacer-med) \*
+- Large (--spacer-lg) \*
 
-- sets up basic media queries and increases font and spacer size accordingly
+\* increases at 800px
 
-- formats form elements, including making divs inside form elements into rows
+### Font
 
-## How to use
+- Small (--font-size-sm)
+- Medium (--font-size-med)
+- Large (--font-size-lg)
 
-Add rachel.css and globals.css (and re-name rachel.css please) to project. Import to App.js or equivalent. Adjust styles as needed.
+- Line spacing (--line-spacing)
+
+- Font Family (--font)
+
+### Button
+
+- Width
+- Height
+- Border radius
+
+## <main>
+
+Th
