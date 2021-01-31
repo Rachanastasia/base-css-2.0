@@ -35,23 +35,23 @@ This file contains all CSS variables for the project.
 
 ### Button
 
-- Width
-- Height
+- Width (--button-width)
+- Height (--button-height)
 - Border radius
 
 ## rachel.css
 
 ### Header
 
-Sets up as as flex box with title and button stacked in mobile and justified space between on larger screens
+Sets up as as flex box with title and button stacked in mobile and justified space between on larger screens. Header is --button-width tall. 
 
 ### Section
 
-Sets up as flex column that is meant to be the immediate child sub-section of main. It limits width and has small padding.
+Sets up as flex column that is meant to be the immediate child of main. It limits width and has small padding.
 
 ### Form
 
-Sets up label and input next to each other and aligns form elements.
+Sets up label and input next to each other and aligns form elements. Styles the form button with custom buttons styles.
 
 ### Footer
 
